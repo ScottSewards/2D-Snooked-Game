@@ -63,9 +63,9 @@ public class Table extends JPanel implements MouseListener, MouseMotionListener 
         }
 
         g.setColor(Color.white); //SET COLOUR OF STRINGS
-        //g.drawString(score + "", 15, 25); //DRAW SCORE
-        g.drawString(time, table.width / 2 - 15, 25); //DRAW TIMER
-
+        g.drawString("Time : " + time, 15, 25); //DRAW TIMER
+        g.drawString("Score : " + score, 15, 50); //DRAW SCORE
+        
         if (isPressing && isPressingBall) //DRAW CUE IF PLAYER HAS PRESSED MOUSE BUTTON OVER THE WHITE BALL AND IS HOLDING THE MOUST BUTTON
             draw.drawLine(g, balls[0].position, mousePosition); //DRAW CUE
         
@@ -163,6 +163,21 @@ public class Table extends JPanel implements MouseListener, MouseMotionListener 
         }
         
         return false; //RETURN FALSE BECAISE NO BALLS ARE MOVING
+    }
+    
+    public boolean checkPot() {
+        //FOR EACH BALL COMPARE TO 
+        /*
+        for(int i = 0; i < pockets.length; i++) {
+            for(int j = 0; j < balls.length; i++) {
+                if(pockets[i].) {
+                    //DISTANCE BETWEEN BALLS IS RADIUS OF BALL
+                }
+            }
+        }
+        */
+
+        return false;
     }
     
     public void startMatch() { //THIS METHOD SPAWNS ALL BALLS
